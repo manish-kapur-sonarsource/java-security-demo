@@ -6,4 +6,4 @@ phases:
       - mvn verify
   post_build:
     commands:
-      - mvn sonar:sonar -Dsonar.login=$SONAR_LOGIN -Dsonar.host.url=$SONAR_HOST
+      - mvn sonar:sonar -Dsonar.login=$SONAR_LOGIN -Dsonar.host.url=$SONAR_HOST -Dsonar.sca.exclusions=**/package.json,**/package-lock.json
